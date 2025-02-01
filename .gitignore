@@ -1,0 +1,21 @@
+# Python files/folders
+*.pyc
+__pycache__/
+
+# Development environment
+.vscode/
+.idea/
+
+# Django Files/Folders
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+env/
+.env
