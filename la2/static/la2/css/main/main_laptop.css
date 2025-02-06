@@ -1,0 +1,15 @@
+.main__wrap {
+    flex-grow: 1;
+    background-color: #5886a7;
+}
+
+.main {
+    width: 1024px;
+    background: white;
+    border-left: 10px solid #aec6de;
+    border-right: 10px solid #aec6de;
+    padding: 10px;
+    margin: 0 auto;
+    min-height: 200px;
+    height: 100%;
+}

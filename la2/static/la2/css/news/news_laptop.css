@@ -1,0 +1,30 @@
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.news__item {
+    background-color: #fffbd5;
+    border: 1px solid #dbebf4;
+    padding: 10px;
+}
+
+.news__item-header {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.news__item-title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.news__item-date {
+    font-size: 14px;
+    line-height: 16px;
+    color: #5e5858;
+}

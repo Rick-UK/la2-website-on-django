@@ -1,0 +1,28 @@
+@import url("reset.css");
+@import url("fonts.css");
+
+@import url("header/header_laptop.css");
+@import url("header/header_mobile-m.css");
+
+@import url("server-status/server-status_laptop.css");
+@import url("server-status/server-status_mobile-m.css");
+
+@import url("main/main_laptop.css");
+@import url("main/main_mobile-m.css");
+
+@import url("footer/footer_laptop.css");
+@import url("footer/footer_mobile-m.css");
+
+body {
+    background-color: #5886a7;
+    font-family: "Lora", serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.main h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}

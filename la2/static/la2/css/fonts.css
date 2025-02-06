@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Cinzel";
+    src: url("../fonts/Cinzel/static/Cinzel-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url("../fonts/Cinzel/static/Cinzel-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora/static/Lora-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora/static/Lora-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}

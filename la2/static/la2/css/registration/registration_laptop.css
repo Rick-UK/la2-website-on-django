@@ -1,0 +1,43 @@
+.registration {
+    background-color: #fffbd5;
+    border: 1px solid #dbebf4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.registration__title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.registration__label-text {
+    width: 85px;
+    display: inline-block;
+}
+
+.registration__button {
+    background-image: linear-gradient(#8fd33a 50%, #6eae19 50%);
+    border: 0;
+    padding: 4px 20px;
+    font-family: "Lora", serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.registration__button:hover {
+    background-image: linear-gradient(#6eae19 50%, #8fd33a 50%);
+}
+
+.registration__fail {
+    font-weight: 700;
+    color: #7b1414;
+}
+
+.registration__success {
+    font-weight: 700;
+    color: #4e7b14;
+}
