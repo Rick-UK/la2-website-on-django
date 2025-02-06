@@ -1,0 +1,26 @@
+{% load static %}
+<header class="header__wrap">
+        <div class="header">
+            <div class="header__bg">
+                <a href="{% url 'la2:index' %}">
+                    <img class="header__logo" src="{% static 'la2/images/design/header_logo_339_61.png' %}" alt="Lineage 2 logo" height="61">
+                </a>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="{% url 'la2:index' %}">Home</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="play.html">Quick Start</a></li>
+                        <li><a href="donate.html">Support the Server</a></li>
+                        <li><a href="about.html">About the Server</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="server-status">
+                <h2 class="server-status__title">Status of servers:</h2>
+                x2 - <span class="server-status__online">online 2456</span>,
+                x50 - <span class="server-status__offline">offline</span>,
+                x1200 - <span class="server-status__online">online 4523</span>
+            </div>
+        </div>
+
+</header>

@@ -1,0 +1,69 @@
+.header__wrap {
+    background-image: linear-gradient(#cedcf9, #5886a6);
+    padding-top: 15px;
+}
+
+.header {
+    width: 1024px;
+    background: #d6e5fc;
+    background-image: linear-gradient(#d6e5fc, #aec6de);
+    border-radius: 20px 20px 0 0;
+    padding: 10px 10px 0 10px;
+    margin: 0 auto;
+}
+
+.header__bg {
+    background-image: url("../../images/design/header_bg.png");
+    background-position: 0px -255px;
+    background-repeat: no-repeat;
+    min-height: 240px;
+    padding: 20px;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #94b5cc;
+}
+
+.header__logo {
+    height: 55px;
+}
+
+.header__nav {
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.header__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header__nav a {
+    display: block;
+    /* box-sizing: border-box; */
+    /* margin: 0 auto; */
+    padding: 4px 12px;
+    /* width: 80%; */
+    /* max-width: 200px; */
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    /* letter-spacing: 1px; */
+    /* transition: all 0.3s ease-out; */
+    border: 1px solid #fff;
+}
+
+.header__nav a:hover,
+.header__nav a:focus,
+.header__nav a:active {
+    background: #fff;
+    /* fallback color for old browsers */
+    background: rgb(255, 255, 255);
+    color: #000;
+    /* transition: all 0.5s ease-in; */
+}

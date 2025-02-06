@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}La2 the best{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'la2/css/styles.css' %}">
+    {% block extend_css %}{% endblock %}
+</head>
+<body>
+    {% include 'la2/includes/header.html' %}
+
+    <main class="main__wrap">
+        <div class="main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </main>
+
+    {% include 'la2/includes/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,31 @@
+@media screen and (max-width: 1023px) {
+    .header__wrap {
+        padding-top: 0;
+    }
+
+    .header {
+        width: 375px;
+        border-radius: 0;
+    }
+
+    .header__bg {
+        background-position: -53px -108px;
+        background-size: 589px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .header__logo {
+        height: auto;
+        width: 220px;
+    }
+
+    .header__nav {
+        width: 210px;
+    }
+
+    .header__nav a {
+        color: #000;
+    }
+
+}

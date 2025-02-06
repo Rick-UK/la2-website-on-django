@@ -1,0 +1,24 @@
+.server-status {
+    border-bottom: 1px solid #94b5cc;
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    line-height: 19px;
+    padding: 6px 20px 4px 20px;
+}
+
+.server-status__title {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 700;
+}
+
+.server-status__online {
+    font-weight: 700;
+    color: #4e7b14;
+}
+
+.server-status__offline {
+    font-weight: 700;
+    color: #7b1414;
+}

@@ -1,0 +1,58 @@
+{% extends 'la2/base.html' %}
+{% block content %}
+<div class="news">
+{% if list_of_news %}
+    {% for news in list_of_news %}
+        <div class="news__item">
+            <div class="news__item-header">
+                <h2 class="news__item-title">
+                    {{ news.title }}
+                </h2>
+                <div class="news__item-date">
+                    {{ news.created_at|date:'Y-m-d H:i' }}
+                </div>
+            </div>
+
+            <p class="news__item-text">
+                {{ news.content }}
+            </p>
+        </div>
+    {% endfor %}
+
+
+{% endif %}
+
+
+    <nav class="pagination__wrap">
+        <ul class="pagination">
+            {% if list_of_news.has_previous %}
+                <li ><a href="/">« First</a></li>
+                <li ><a href="?page={{ list_of_news.previous_page_number }}">‹ Previous</a></li>
+            {% endif %}
+
+            {% for num in list_of_news.paginator.page_range %}
+                {% if list_of_news.number == num %}
+                    <li><a href="?page= {{ num }}" class="pagination__current-page">{{ num }}</a></li>
+                {% elif num >= list_of_news.number|add:-2 and num <= list_of_news.number|add:2  %}
+                    <li><a href="?page= {{ num }}">{{ num }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if list_of_news.has_next %}
+                <li ><a href="?page= {{ list_of_news.next_page_number }}">Next ›</a></li>
+                <li ><a href="?page={{ list_of_news.paginator.num_pages }}"> Last »</a></li>
+            {% endif %}
+
+
+
+{#            <li style="display: none;"><a href="#">« Previous</a></li>#}
+{#            <li><a href="#" class="pagination__current-page">1</a></li>#}
+{#            <li><a href="#">2</a></li>#}
+{#            <li><a href="#">3</a></li>#}
+{#            <li><span>…</span></li>#}
+{#            <li><a href="#">10</a></li>#}
+{#            <li><a href="#">Next »</a></li>#}
+        </ul>
+    </nav>
+</div>
+{% endblock %}

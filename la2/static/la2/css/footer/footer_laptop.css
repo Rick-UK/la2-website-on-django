@@ -1,0 +1,22 @@
+.footer__wrap {
+    background: #5886a6;
+    padding-bottom: 15px;
+}
+
+.footer {
+    width: 1024px;
+    background: #aec6de;
+    border-radius: 0 0 20px 20px;
+    padding: 0 10px 10px 10px;
+    margin: 0 auto;
+}
+
+.footer__content {
+    background-color: #ffffff;
+    min-height: 40px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 0 0 14px 14px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}

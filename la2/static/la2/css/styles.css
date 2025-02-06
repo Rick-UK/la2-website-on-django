@@ -1,0 +1,30 @@
+@import url("reset.css");
+@import url("fonts.css");
+
+@import url("header/header_laptop.css");
+@import url("header/header_mobile-m.css");
+
+@import url("server-status/server-status_laptop.css");
+@import url("server-status/server-status_mobile-m.css");
+
+@import url("main/main_laptop.css");
+@import url("main/main_mobile-m.css");
+
+@import url("news/news_laptop.css");
+@import url("pagination/pagination_laptop.css");
+
+@import url("footer/footer_laptop.css");
+@import url("footer/footer_mobile-m.css");
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #5886a7;
+    font-family: "Lora", serif;
+    font-size: 16px;
+    line-height: 20px;
+}
