@@ -11,6 +11,9 @@ def index(request):
     paginator = Paginator(list_of_news, 5)
     page_number = request.GET.get('page')
     news_list = paginator.get_page(page_number)
+
+    request.session['get_back_url_news'] = request.get_full_path()
+
     return render(request, 'la2/index.html', {'list_of_news':news_list})
 
 def news_detail_page(request,news_slug):

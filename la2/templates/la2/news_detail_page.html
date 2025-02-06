@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ news.title }}</title>
-</head>
-<body>
-<div class="">
-    <h2>{{ news.title }}</h2>
-    <div class="">
-        {{ news.content }}
-    </div>
+{% extends 'la2/base.html' %}
+
+{% block content %}
+<div class="news">
+        <div class="news__item">
+
+
+{#            <a href="{% url 'la2:index' %}" class="news__item-go-back-link">« Go back</a>#}
+            <a href="{{ request.session.get_back_url_news }}" class="news__item-go-back-link">« Go back</a>
+
+            <div class="news__item-header">
+                <h2 class="news__item-title">
+                    {{ news.title }}
+                </h2>
+                <div class="news__item-date">
+                    {{ news.created_at|date:'Y-m-d H:i' }}
+                </div>
+            </div>
+
+            <p class="news__item-text">
+                {{ news.content }}
+            </p>
+        </div>
 </div>
-</body>
-</html>
+{% endblock %}

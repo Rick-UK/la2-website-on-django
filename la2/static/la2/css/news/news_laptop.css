@@ -28,3 +28,13 @@
     line-height: 16px;
     color: #5e5858;
 }
+
+.news__item-detail-link{
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.news__item-go-back-link{
+    margin-bottom: 10px;
+    display: inline-block;
+}
