@@ -16,6 +16,8 @@
             <p class="news__item-text">
                 {{ news.content }}
             </p>
+
+            <a href="{{ news.get_absolute_url }}" class="news__item-detail-link">Далее...</a>
         </div>
     {% endfor %}
 
@@ -43,15 +45,6 @@
                 <li ><a href="?page={{ list_of_news.paginator.num_pages }}"> Last »</a></li>
             {% endif %}
 
-
-
-{#            <li style="display: none;"><a href="#">« Previous</a></li>#}
-{#            <li><a href="#" class="pagination__current-page">1</a></li>#}
-{#            <li><a href="#">2</a></li>#}
-{#            <li><a href="#">3</a></li>#}
-{#            <li><span>…</span></li>#}
-{#            <li><a href="#">10</a></li>#}
-{#            <li><a href="#">Next »</a></li>#}
         </ul>
     </nav>
 </div>
