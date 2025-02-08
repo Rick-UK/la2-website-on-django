@@ -22,3 +22,6 @@ def news_detail_page(request,news_slug):
 
 def play_page(request):
     return render(request, 'la2/play_page.html')
+
+def donate_page(request):
+    return render(request, 'la2/donate_page.html')
