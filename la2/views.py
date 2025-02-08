@@ -25,3 +25,6 @@ def play_page(request):
 
 def donate_page(request):
     return render(request, 'la2/donate_page.html')
+
+def about_page(request):
+    return render(request, 'la2/about_page.html')
