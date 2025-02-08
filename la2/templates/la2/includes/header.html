@@ -1,4 +1,6 @@
 {% load static %}
+{% load status_of_servers_tags %}
+
 <header class="header__wrap">
         <div class="header">
             <div class="header__bg">
@@ -15,12 +17,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="server-status">
-                <h2 class="server-status__title">Status of servers:</h2>
-                x2 - <span class="server-status__online">online 2456</span>,
-                x50 - <span class="server-status__offline">offline</span>,
-                x1200 - <span class="server-status__online">online 4523</span>
-            </div>
+
+            {% get_status_of_servers %}
+
         </div>
 
 </header>
