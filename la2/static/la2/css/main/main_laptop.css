@@ -13,3 +13,10 @@
     min-height: 200px;
     height: 100%;
 }
+
+.main__title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}

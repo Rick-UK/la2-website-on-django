@@ -19,3 +19,6 @@ def index(request):
 def news_detail_page(request,news_slug):
     news = get_object_or_404(News, slug=news_slug)
     return render(request, 'la2/news_detail_page.html', {'news':news})
+
+def play_page(request):
+    return render(request, 'la2/play_page.html')
