@@ -1,0 +1,74 @@
+{% extends 'la2/base.html' %}
+{% load static %}
+
+{% block extend_css %}
+    <link rel="stylesheet" href="{% static 'la2/css/feedback/feedback_laptop.css' %}">
+{% endblock %}
+
+{% block title %}
+    Feedback
+{% endblock %}
+
+{% block content %}
+    {% if is_forms_successfully_filled_out %}
+
+        <h2 class="feedback__title">Feedback</h2>
+
+        <div class="feedback__success">
+            Your feedback has been successfully received.
+        </div>
+
+    {% else %}
+
+
+        <form class="feedback" method="post" action="{% url 'la2:feedback_page' %}">
+
+        <h2 class="feedback__title">Feedback</h2>
+
+        <p>
+            <b>Adventurer, need help?</b> Whether it's a bug, an account issue, or a suggestion, let us know! Fill out
+            the
+            form, and our team will assist you.
+        </p>
+
+        {% csrf_token %}
+
+        <label class="feedback__label" for="{{ form.userEmail.id_for_label }}">
+            <span class="feedback__label-text">{{ form.userEmail.label }}:</span>
+            {{ form.userEmail }}
+        </label>
+
+        <div class="feedback__fail">
+            {{ form.userEmail.errors }}
+        </div>
+
+        <label class="feedback__label" for="{{ form.server.id_for_label }}">
+            <span class="feedback__label-text">{{ form.server.label }}:</span>
+            {{ form.server }}
+        </label>
+
+        <div class="feedback__fail">
+        {{ form.server.errors }}
+        </div>
+
+        <label class="feedback__label" for="{{ form.message.id_for_label }}">
+            <span class="feedback__label-text">{{ form.message.label }}:</span>
+            {{ form.message }}
+        </label>
+
+        <div class="feedback__fail">
+        {{ form.message.errors }}
+        </div>
+
+        <div class="feedback__fail">
+            {{ form.non_field_errors }}
+        </div>
+
+        <button class="feedback__button">
+            Send
+        </button>
+
+    {% endif %}
+
+</form>
+{% endblock %}
