@@ -14,9 +14,22 @@
     font-weight: 700;
 }
 
+.registration__label {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
 .registration__label-text {
     width: 85px;
     display: inline-block;
+}
+
+.registration__input {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .registration__button {
@@ -40,4 +53,5 @@
 .registration__success {
     font-weight: 700;
     color: #4e7b14;
+    margin-top: 10px;
 }

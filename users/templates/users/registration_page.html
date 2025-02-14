@@ -1,0 +1,68 @@
+{% extends 'la2/base.html' %}
+{% load static %}
+
+{% block extend_css %}
+    <link rel="stylesheet" href="{% static 'users/css/registration/registration_laptop.css' %}">
+{% endblock %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block content %}
+    {% if is_registration_successful %}
+        <h2 class="registration__title">Registration</h2>
+
+        <div class="registration__success">
+            You have successfully registered, now you can use this account to connect to our Lineage 2 server.
+        </div>
+    {% else %}
+        <form class="registration" method="post" action="{% url 'users:registration_page' %}">
+            {% csrf_token %}
+
+            <h2 class="registration__title">Registration</h2>
+
+            <label class="registration__label" for="{{ form.username.id_for_label }}">
+                <span class="registration__label-text">{{ form.username.label }}:</span>
+                {{ form.username }}
+            </label>
+            <div class="registration__fail">
+                {{ form.username.errors }}
+            </div>
+
+            <label class="registration__label" for="{{ form.email.id_for_label }}">
+                <span class="registration__label-text">{{ form.email.label }}:</span>
+                {{ form.email }}
+            </label>
+            <div class="registration__fail">
+                {{ form.email.errors }}
+            </div>
+
+            <label class="registration__label" for="{{ form.password1.id_for_label }}">
+                <span class="registration__label-text">{{ form.password1.label }}:</span>
+                {{ form.password1 }}
+            </label>
+            <div class="registration__fail">
+                {{ form.password1.errors }}
+            </div>
+
+            <label class="registration__label" for="{{ form.password2.id_for_label }}">
+                <span class="registration__label-text">{{ form.password2.label }}:</span>
+                {{ form.password2 }}
+            </label>
+            <div class="registration__fail">
+                {{ form.password2.errors }}
+            </div>
+
+            <div class="registration__fail">
+                {{ form.non_field_errors }}
+            </div>
+
+            <button class="registration__button">
+                Register
+            </button>
+
+        </form>
+    {% endif %}
+
+{% endblock %}
